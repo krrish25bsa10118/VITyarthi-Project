@@ -7,7 +7,7 @@ FILE_NAME = "expense_tracker.csv"
 
 def initialize_file():
     if not os.path.exists(FILE_NAME):
-        with open(FILE_NAME, "w", newline="") as f:
+        with open(FILE_NAME, "a", newline="") as f:
             writer = csv.writer(f)
             writer.writerow(["Date", "Type", "Description", "Amount", "Balance"])
 
